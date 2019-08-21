@@ -4,4 +4,5 @@ COPY package*.json ./
 RUN npm install --only=production
 COPY . .
 EXPOSE 3000
-CMD [ "npm", "start" ]
+EXPOSE 9229
+CMD [ "npm", "start", "--inspect-brk=0.0.0.0" ]

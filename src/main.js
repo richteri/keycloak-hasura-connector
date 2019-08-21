@@ -37,7 +37,7 @@ app.get('/', keycloak.middleware(), (res, req) => {
         .jsonp({
             ...tokenParsed,
         });
-});
+}).catch(err => console.log(err));
 
 app.listen(config.get('port'), () => {
     const port = config.get('port');
