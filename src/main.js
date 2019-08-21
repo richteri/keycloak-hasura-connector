@@ -16,6 +16,9 @@ if (debugMode) {
 }
 
 app.get('/', keycloak.middleware(), (res, req) => {
+    if (config.get('debugMode')) {
+        console.log('kauth', res.kauth);
+    }
     if (!res.kauth.grant) {
         if(AnonymousRole){
             return req.status(200)
