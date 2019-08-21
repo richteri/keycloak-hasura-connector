@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/main.js --inspect",
+    "start": "node src/main.js --inspect-brk=0.0.0.0",
     "lint": "jshint -c .jshintrc --exclude-path .gitignore ."
   },
   "repository": {
